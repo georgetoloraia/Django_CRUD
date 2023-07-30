@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>ALL Todos</h1>
+        {% for todo in todos %}
+            <p>Title: {{ todo.title }}</p>
+            <p>Description: {{ todo.description }}</p>
+            <!-- if needed displey other fields -->
+        {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        {% if todo %}
+            <h1>Delete Todo</h1>
+            <form action="/api/todos/{{ todo.id }}/delete/" method="POST" onsubmit="return confirm('Are you sure you want to delete this todo?')">
+                {% csrf_token %}
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit">Delete Todo</button>
+            </form>
+        {% else %}
+            <p>Todo not found.</p>
+        {% endif %}
+    </body>
+</html>

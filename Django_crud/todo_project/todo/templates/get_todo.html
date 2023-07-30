@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static%}
+        <link href="{% static 'styles.css' %}" rel="stylesheet">
+    </head>
+    <body class="get_todo_body">
+        <h1 class="get_todo_h1">Todo</h1>
+        <p class="get_todo_p">Id: {{ id }} Title: {{ title }} Description: {{ description }}</p>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static%}
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+    </head>
+    <body class="get_all_todos_2">
+        <h1>ALL Todos</h1>
+        <table class="class_styles">
+            <tr class="class_styles th">
+                <td class="class_styles td">ID</td>
+                <td class="class_styles td">TITLE</td>
+                <td class="class_styles td">DESCRIPTION</td>
+            </tr>
+        {% for todo in todos %}
+            <tr class="class_styles th">
+                <td class="class_styles td">{{todo.id }}</td>
+                <td class="class_styles td">{{ todo.title }}</td>
+                <td class="class_styles th">{{ todo.description }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </body>
+</html>

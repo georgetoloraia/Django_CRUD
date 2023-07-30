@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        {% comment %} {% if todo %} {% endcomment %}
+            <h1>Update Todo</h1>
+            <form action="todos/{{ todo.id }}/update/" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="_method" value="PUT">
+                <input type="text" name="title" placeholder="Updated Title" value="{{ todo.title }}" required>
+                <input type="text" name="description" placeholder="Updated Description" value="{{ todo.description }}" required>
+                <!-- add another if needed -->
+                <button type="submit">Update Todo</button>
+            </form>
+        {% comment %} {% else %}
+            <p>Todo not found.</p>
+        {% endif %} {% endcomment %}
+    </body>
+</html>
