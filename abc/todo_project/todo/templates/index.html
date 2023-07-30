@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static%}
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+</head>
+
+<body class="body">
+    <!-- get all todos list-->
+    <p class="name1">For see all saved TODOS, press TO Get All Todos Down!<p>
+    <div class="get_all_todos">
+        <p></p>
+        <div>
+            {% comment %} <h3>Get All Todos</h3> {% endcomment %}
+            <button id="see" type="button">
+                <a class="name2" href={% url "get_all_todos"%}>Get All Todos</a>
+            </button>
+        </div>
+        <p></p>
+        <hr>
+    </div>
+      
+    <!-- get todo id-->
+    <div class="get_todo">
+        <p class="name3">For get current id, Enter id and submit. </p>
+    <form method="POST" action="{% url "get_todo" %}">
+        {% csrf_token %}
+        <div>
+            <p></p>
+            <input type="text" placeholder="enter id" name="get_todo_id">
+            <button type="submit"> submit </button>
+            <p></p>
+        </div>
+        <hr>
+    </form>
+    </div>
+    <!-- create todo list -->
+    </div class="create_todo">
+        <form method="POST" action="{% url "create_todo" %}">
+            {% csrf_token %}
+            <input type="text" name="title" placeholder="Title" required>
+            <input type="text" name="description" placeholder="Description" required>
+            <!-- add another if needed -->
+            <button type="submit">Create Todo</button>
+        </form>
+    </div>
+    <hr>
+
+    <div class="update_todo">
+        <h1 id="ups">Update Todo</h1>
+            <form action="todos/{{ todo.id }}/update/" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="_method" value="PUT">
+                <input type="text" name="title" placeholder="Updated Title" value="{{ todo.title }}" required>
+                <input type="text" name="description" placeholder="Updated Description" value="{{ todo.description }}" required>
+                <!-- add another if needed -->
+                <button type="submit">Update Todo</button>
+            </form>
+    </div>
+    <hr>
+      
+    <div class="delete_todo">
+        <h1 id="ups">Delete Todo</h1>
+            <form action="todos{{ todo.id }}delete/" method="POST" onsubmit="return confirm('Are you sure you want to delete this todo?')">
+                {% csrf_token %}
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit">Delete Todo</button>
+            </form>
+    </div>
+    <hr>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+.body {
+    /* margin: 55px;
+    margin: rgb(185, 28, 28);
+    border-bottom-color: brown;
+    border-top-color: black;
+    border: 3px solid rgb(38, 180, 50); */
+    background-image: url('https://www.niit.com/india/sites/default/files/2022-01/SQL-for-Beginners.jpg');
+    text-align: center;
+}
+
+#see {
+    color: deeppink;
+}
+#ups {
+    color: rgb(65, 187, 8);
+}
+
+
+#paragraf {
+    text-align: center;
+}
+
+.name1 {
+    color: aquamarine;
+}
+
+.name3 {
+    color:red;
+}
+
+/* -------------------------------------------------------------------- */
+
+/* styles.css */
+
+.class_styles {
+    border-collapse: collapse;
+    width: 100%;
+    color:rgb(10, 243, 41);
+  }
+  
+  .class_styles th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .class_styles td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .class_styles td:first-child {
+    width: 10%;
+  }
+  
+  .class_styles td:nth-child(2) {
+    width: 30%;
+  }
+  
+  .class_styles td:nth-child(3) {
+    width: 60%;
+  }
+  
+  /* Additional Styles (Optional) */
+  
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+  
+  /* body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  } */
+  
+.get_all_todos_2 {
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg');
+}
+
+
+/* get_todo.html */
+
+.get_todo_body {
+  background-color: #a499c0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* .get_todo_h1 {
+  color: #0f1c68;
+  font-size: 24px;
+  text-align: center;
+}
+
+.get_todo_p {
+  color: #be3333;
+  font-size: 16px;
+  text-align: center;
+} */
